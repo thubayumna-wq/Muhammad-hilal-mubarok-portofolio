@@ -403,131 +403,6 @@ left:100%;
     overflow:hidden;
 }
 
-/* ===== GLOW BACKGROUND ===== */
-
-.glow-orb{
-
-position:absolute;
-
-border-radius:50%;
-
-filter:blur(120px);
-
-opacity:.85;
-
-mix-blend-mode:screen;
-
-z-index:0;
-
-animation:
-orbMove 12s ease-in-out infinite;
-
-}
-
-/* ORB 1 */
-
-.orb1{
-
-width:400px;
-height:400px;
-
-background:
-rgba(139,92,246,.55);
-
-top:5%;
-left:5%;
-
-}
-/* ORB 2 */
-
-.orb2{
-
-width:450px;
-height:450px;
-
-background:
-rgba(99,102,241,.50);
-
-bottom:0;
-right:5%;
-
-animation-delay:2s;
-
-}
-
-/* ORB 3 */
-
-.orb3{
-
-width:300px;
-height:300px;
-
-background:
-rgba(168,85,247,.45);
-
-top:40%;
-left:45%;
-
-animation-delay:4s;
-
-}
-/* ANIMASI */
-
-@keyframes orbMove{
-
-0%,100%{
-transform:
-translateY(0)
-translateX(0);
-}
-
-50%{
-transform:
-translateY(-40px)
-translateX(30px);
-}
-
-
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-135deg,
-rgba(139,92,246,.08),
-transparent,
-rgba(99,102,241,.08)
-);
-
-z-index:0;
-
-}
-
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-135deg,
-rgba(139,92,246,.08),
-transparent,
-rgba(99,102,241,.08)
-);
-
-z-index:0;
-
-}
-
 .hero::before{
     content:'';
 
@@ -569,44 +444,6 @@ z-index:0;
     z-index:2;
 
     animation:fadeUp 1s ease;
-}
-
-.hero h1{
-animation:textGlow 3s infinite alternate;
-}
-
-@keyframes textGlow{
-
-0%{
-text-shadow:
-0 0 10px rgba(139,92,246,.5),
-0 0 20px rgba(139,92,246,.3);
-}
-
-100%{
-text-shadow:
-0 0 20px rgba(99,102,241,.9),
-0 0 40px rgba(99,102,241,.6);
-}
-
-}
-
-.hero-content{
-animation:
-fadeUp 1s ease,
-heroFloat 5s infinite ease-in-out;
-}
-
-@keyframes heroFloat{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-12px);
-}
-
 }
 
 .hero h1{
@@ -1300,6 +1137,40 @@ opacity:.9;
 position:relative;
 }
 
+.hero span{
+position:absolute;
+
+width:6px;
+height:6px;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+floatParticle 5s linear infinite;
+}
+
+@keyframes floatParticle{
+
+0%{
+transform:
+translateY(0);
+
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:
+translateY(-200px);
+
+opacity:0;
+}
+
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1486,11 +1357,11 @@ position:relative;
 
 <!-- HERO -->
 
- <section class="hero" id="home">
-        
-<div class="glow-orb orb1"></div>
-<div class="glow-orb orb2"></div>
-<div class="glow-orb orb3"></div>
+<section class="hero" id="home">
+<span style="left:20%;top:80%"></span>
+<span style="left:40%;top:90%"></span>
+<span style="left:60%;top:75%"></span>
+<span style="left:80%;top:85%"></span>
 
 <header>
 
@@ -1849,7 +1720,7 @@ Desain aplikasi mobile dan website modern
 
 </div>
 
-<!-- DESIGN LOGO -->
+<!-- Design Logo -->
 
 <div class="portfolio-item reveal">
 
@@ -1866,7 +1737,7 @@ alt="Design Logo">
 <h3>Design Logo</h3>
 
 <p>
-Logo komunitas Kreatif Kolektif
+Design Logo Komunitas Kreatif Kolektif 
 </p>
 
 <span class="portfolio-tag">Mural</span>
