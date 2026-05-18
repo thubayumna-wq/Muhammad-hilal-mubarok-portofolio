@@ -476,18 +476,35 @@ animation-delay:4s;
 @keyframes orbMove{
 
 0%,100%{
-
 transform:
 translateY(0)
 translateX(0);
-
 }
 
 50%{
-
 transform:
 translateY(-40px)
 translateX(30px);
+}
+
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+135deg,
+rgba(139,92,246,.08),
+transparent,
+rgba(99,102,241,.08)
+);
+
+z-index:0;
 
 }
 
@@ -511,7 +528,6 @@ z-index:0;
 
 }
 
-}
 .hero::before{
     content:'';
 
@@ -553,6 +569,44 @@ z-index:0;
     z-index:2;
 
     animation:fadeUp 1s ease;
+}
+
+.hero h1{
+animation:textGlow 3s infinite alternate;
+}
+
+@keyframes textGlow{
+
+0%{
+text-shadow:
+0 0 10px rgba(139,92,246,.5),
+0 0 20px rgba(139,92,246,.3);
+}
+
+100%{
+text-shadow:
+0 0 20px rgba(99,102,241,.9),
+0 0 40px rgba(99,102,241,.6);
+}
+
+}
+
+.hero-content{
+animation:
+fadeUp 1s ease,
+heroFloat 5s infinite ease-in-out;
+}
+
+@keyframes heroFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
 }
 
 .hero h1{
@@ -1432,6 +1486,8 @@ position:relative;
 
 <!-- HERO -->
 
+ <section class="hero" id="home">
+        
 <div class="glow-orb orb1"></div>
 <div class="glow-orb orb2"></div>
 <div class="glow-orb orb3"></div>
