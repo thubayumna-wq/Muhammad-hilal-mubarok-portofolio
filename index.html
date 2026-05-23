@@ -1444,17 +1444,21 @@ z-index:10;
 
 position:absolute;
 
-padding:14px 24px;
+padding:15px 26px;
 
-border-radius:40px;
+border-radius:50px;
 
 background:
-rgba(20,20,40,.65);
+linear-gradient(
+135deg,
+rgba(139,92,246,.22),
+rgba(99,102,241,.20)
+);
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 
 border:
-1px solid rgba(255,255,255,.08);
+1px solid rgba(255,255,255,.1);
 
 color:white;
 
@@ -1462,11 +1466,118 @@ text-decoration:none;
 
 display:flex;
 
-gap:10px;
-
 align-items:center;
 
+gap:10px;
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:
+0 10px 30px
+rgba(99,102,241,.25);
+
 }
+
+.orbit::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:100%;
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.35),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.orbit:hover::before{
+
+left:120%;
+
+}
+
+.orbit:hover{
+
+transform:
+
+translateY(-8px)
+scale(1.08);
+
+box-shadow:
+
+0 20px 50px
+rgba(139,92,246,.45);
+
+background:
+
+linear-gradient(
+135deg,
+rgba(139,92,246,.45),
+rgba(99,102,241,.35)
+);
+
+}
+
+.website-btn{
+
+background:
+
+linear-gradient(
+135deg,
+#f59e0b,
+#ea580c
+);
+
+box-shadow:
+
+0 0 40px
+rgba(245,158,11,.35);
+
+animation:
+
+coffeeGlow 3s infinite;
+
+}
+
+@keyframes coffeeGlow{
+
+0%,100%{
+
+transform:scale(1);
+
+box-shadow:
+0 0 30px
+rgba(245,158,11,.35);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+box-shadow:
+0 0 55px
+rgba(245,158,11,.7);
+
+}
+
+}
+
 
 .orbit-ring{
 
@@ -1588,9 +1699,15 @@ Keahlian
 Portfolio
 </a>
 
-<a href="#contact" class="orbit menu5">
-<i class="fa-solid fa-globe"></i>
-Website
+<a
+href="https://thubayumna-wq.github.io/sistem-kasir/"
+target="_blank"
+class="orbit menu5 website-btn">
+
+<i class="fa-solid fa-mug-hot"></i>
+
+Coffee Shop
+
 </a>
 
 </div>
