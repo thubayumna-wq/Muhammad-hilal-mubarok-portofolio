@@ -1435,8 +1435,33 @@ heroFloat 6s ease-in-out infinite;
 
 .center-photo{
 
-width:220px;
-height:220px;
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:
+8px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 0 70px rgba(139,92,246,.7);
+
+position:relative;
+
+z-index:5;
+
+transition:.5s;
+
+}
+
+.center-photo:hover{
+
+transform:
+scale(1.05);
+
+}
 
 border-radius:50%;
 
@@ -1457,14 +1482,15 @@ z-index:10;
 
 position:absolute;
 
-padding:14px 22px;
+padding:14px 24px;
 
-border-radius:20px;
+border-radius:40px;
 
 background:
-rgba(255,255,255,.05);
+rgba(20,20,40,.6);
 
-backdrop-filter:blur(10px);
+backdrop-filter:
+blur(12px);
 
 border:
 1px solid rgba(255,255,255,.08);
@@ -1475,14 +1501,35 @@ color:white;
 
 display:flex;
 
-gap:8px;
-
 align-items:center;
 
-animation:
-navFloat 4s ease-in-out infinite;
+gap:10px;
+
+font-weight:600;
 
 transition:.4s;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.3);
+
+z-index:20;
+
+}
+
+.orbit:hover{
+
+transform:
+scale(1.08);
+
+background:
+linear-gradient(
+135deg,
+#8b5cf6,
+#6366f1
+);
+
+box-shadow:
+0 0 30px rgba(139,92,246,.6);
 
 }
 
@@ -1496,61 +1543,61 @@ rgba(139,92,246,.25);
 
 }
 
-/* POSISI MENU */
+.orbit-ring{
 
-/* BERANDA */
+position:absolute;
+
+width:420px;
+height:420px;
+
+border-radius:50%;
+
+border:
+2px dashed rgba(255,255,255,.12);
+
+animation:
+spin 30s linear infinite;
+
+}
+
 .menu1{
-top:90px;
-
+top:-10px;
 left:50%;
-
-transform:
-translateX(-50%);
+transform:translateX(-50%);
 }
 
-/* TENTANG */
 .menu2{
-
-left:90px;
-
+left:-40px;
 top:50%;
-
-transform:
-translateY(-50%);
-
+transform:translateY(-50%);
 }
 
-/* KEAHLIAN */
 .menu3{
-
-right:90px;
-
+right:-40px;
 top:50%;
-
-transform:
-translateY(-50%);
-
+transform:translateY(-50%);
 }
 
-/* PORTFOLIO */
 .menu4{
-
-bottom:90px;
-
+bottom:-10px;
 left:50%;
-
-transform:
-translateX(-50%);
-
+transform:translateX(-50%);
 }
-
-/* WEBSITE */
 
 .menu5{
+bottom:60px;
+right:10px;
+}
 
-right:120px;
+@keyframes spin{
 
-bottom:120px;
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
 
 }
 /* GERAK NAIK TURUN */
@@ -1603,6 +1650,8 @@ translateY(-12px);
 
 <div class="hero-profile">
 
+<div class="orbit-ring"></div>
+
 <img
 src="https://i.ibb.co.com/gbFTSvLD/Whats-App-Image-2026-04-23-at-22-10-56.jpg"
 class="center-photo"
@@ -1615,27 +1664,22 @@ Beranda
 
 <a href="#about" class="orbit menu2">
 <i class="fa-solid fa-user"></i>
-Tentang
+Tentang Saya
 </a>
 
 <a href="#skills" class="orbit menu3">
-<i class="fa-solid fa-code"></i>
+<i class="fa-solid fa-pen-ruler"></i>
 Keahlian
 </a>
 
 <a href="#portfolio" class="orbit menu4">
-<i class="fa-solid fa-briefcase"></i>
+<i class="fa-solid fa-image"></i>
 Portfolio
 </a>
 
-<a href="https://thubayumna-wq.github.io/sistem-kasir/"
-target="_blank"
-class="orbit menu5">
-
+<a href="#contact" class="orbit menu5">
 <i class="fa-solid fa-globe"></i>
-
 Website
-
 </a>
 
 </div>
