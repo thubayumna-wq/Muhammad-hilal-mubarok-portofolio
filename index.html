@@ -1414,7 +1414,6 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-animation:heroFloat 6s ease-in-out infinite;
 
 }
 
@@ -1600,29 +1599,52 @@ spin 30s linear infinite;
 top:0;
 left:50%;
 transform:translateX(-50%);
+
+animation:
+menuFloat 4s ease-in-out infinite;
 }
 
 .menu2{
 left:0;
 top:50%;
 transform:translateY(-50%);
+
+animation:
+menuFloat 4s ease-in-out infinite;
+
+animation-delay:.5s;
 }
 
 .menu3{
 right:0;
 top:50%;
 transform:translateY(-50%);
+
+animation:
+menuFloat 4s ease-in-out infinite;
+
+animation-delay:1s;
 }
 
 .menu4{
 bottom:0;
 left:50%;
 transform:translateX(-50%);
+
+animation:
+menuFloat 4s ease-in-out infinite;
+
+animation-delay:1.5s;
 }
 
 .menu5{
 bottom:90px;
 right:40px;
+
+animation:
+menuFloat 4s ease-in-out infinite;
+
+animation-delay:2s;
 }
 @keyframes navFloat{
 
@@ -1648,6 +1670,20 @@ translateY(0);
 50%{
 transform:
 translateY(-12px);
+}
+
+}
+
+@keyframes menuFloat{
+
+0%,100%{
+transform:
+translateY(0);
+}
+
+50%{
+transform:
+translateY(-10px);
 }
 
 }
@@ -1972,7 +2008,7 @@ alt="Sketsa Wajah">
 <h3>Sketsa</h3>
 
 <p>
-Karya sketsa realistis dengan detail tinggi
+Karya sketsa realistis 
 </p>
 
 <span class="portfolio-tag">Sketsa</span>
