@@ -1398,14 +1398,14 @@ translateY(-300px);
 
 }
 
-/* ===== FOTO TENGAH ===== */
+/* ===== HERO FOTO ===== */
 
 .hero-profile{
 
 position:relative;
 
-width:620px;
-height:620px;
+width:650px;
+height:650px;
 
 margin:auto;
 
@@ -1414,69 +1414,31 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-animation:
-heroFloat 6s ease-in-out infinite;
+animation:heroFloat 6s ease-in-out infinite;
 
 }
-
-margin:auto;
-
-display:flex;
-
-justify-content:center;
-align-items:center;
-
-animation:
-heroFloat 6s ease-in-out infinite;
-
-}
-
-/* FOTO */
 
 .center-photo{
 
-width:260px;
-height:260px;
+width:270px;
+height:270px;
 
 border-radius:50%;
 
 object-fit:cover;
 
-border:
-8px solid rgba(255,255,255,.08);
+overflow:hidden;
+
+display:block;
+
+border:8px solid rgba(255,255,255,.1);
 
 box-shadow:
 0 0 70px rgba(139,92,246,.7);
 
-position:relative;
-
-z-index:5;
-
-transition:.5s;
-
-}
-
-.center-photo:hover{
-
-transform:
-scale(1.05);
-
-}
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:6px solid rgba(255,255,255,.1);
-
-box-shadow:
-0 0 50px rgba(139,92,246,.5);
-
 z-index:10;
 
 }
-
-/* MENU ORBIT */
 
 .orbit{
 
@@ -1487,59 +1449,22 @@ padding:14px 24px;
 border-radius:40px;
 
 background:
-rgba(20,20,40,.6);
+rgba(20,20,40,.65);
 
-backdrop-filter:
-blur(12px);
+backdrop-filter:blur(12px);
 
 border:
 1px solid rgba(255,255,255,.08);
 
-text-decoration:none;
-
 color:white;
+
+text-decoration:none;
 
 display:flex;
 
-align-items:center;
-
 gap:10px;
 
-font-weight:600;
-
-transition:.4s;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.3);
-
-z-index:20;
-
-}
-
-.orbit:hover{
-
-transform:
-scale(1.08);
-
-background:
-linear-gradient(
-135deg,
-#8b5cf6,
-#6366f1
-);
-
-box-shadow:
-0 0 30px rgba(139,92,246,.6);
-
-}
-
-.orbit:hover{
-
-transform:
-scale(1.1);
-
-background:
-rgba(139,92,246,.25);
+align-items:center;
 
 }
 
@@ -1547,13 +1472,13 @@ rgba(139,92,246,.25);
 
 position:absolute;
 
-width:420px;
-height:420px;
+width:500px;
+height:500px;
 
 border-radius:50%;
 
 border:
-2px dashed rgba(255,255,255,.12);
+2px dashed rgba(255,255,255,.15);
 
 animation:
 spin 30s linear infinite;
@@ -1561,47 +1486,33 @@ spin 30s linear infinite;
 }
 
 .menu1{
-top:-10px;
+top:0;
 left:50%;
 transform:translateX(-50%);
 }
 
 .menu2{
-left:-40px;
+left:0;
 top:50%;
 transform:translateY(-50%);
 }
 
 .menu3{
-right:-40px;
+right:0;
 top:50%;
 transform:translateY(-50%);
 }
 
 .menu4{
-bottom:-10px;
+bottom:0;
 left:50%;
 transform:translateX(-50%);
 }
 
 .menu5{
-bottom:60px;
-right:10px;
+bottom:90px;
+right:40px;
 }
-
-@keyframes spin{
-
-from{
-transform:rotate(0deg);
-}
-
-to{
-transform:rotate(360deg);
-}
-
-}
-/* GERAK NAIK TURUN */
-
 @keyframes navFloat{
 
 0%,100%{
