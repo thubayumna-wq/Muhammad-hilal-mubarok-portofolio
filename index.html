@@ -1397,6 +1397,192 @@ translateY(-300px);
 }
 
 }
+
+/* ===== FOTO TENGAH ===== */
+
+.hero-profile{
+
+position:relative;
+
+width:620px;
+height:620px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+animation:
+heroFloat 6s ease-in-out infinite;
+
+}
+
+margin:auto;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+animation:
+heroFloat 6s ease-in-out infinite;
+
+}
+
+/* FOTO */
+
+.center-photo{
+
+width:220px;
+height:220px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid rgba(255,255,255,.1);
+
+box-shadow:
+0 0 50px rgba(139,92,246,.5);
+
+z-index:10;
+
+}
+
+/* MENU ORBIT */
+
+.orbit{
+
+position:absolute;
+
+padding:14px 22px;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,.05);
+
+backdrop-filter:blur(10px);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+text-decoration:none;
+
+color:white;
+
+display:flex;
+
+gap:8px;
+
+align-items:center;
+
+animation:
+navFloat 4s ease-in-out infinite;
+
+transition:.4s;
+
+}
+
+.orbit:hover{
+
+transform:
+scale(1.1);
+
+background:
+rgba(139,92,246,.25);
+
+}
+
+/* POSISI MENU */
+
+/* BERANDA */
+.menu1{
+top:90px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+}
+
+/* TENTANG */
+.menu2{
+
+left:90px;
+
+top:50%;
+
+transform:
+translateY(-50%);
+
+}
+
+/* KEAHLIAN */
+.menu3{
+
+right:90px;
+
+top:50%;
+
+transform:
+translateY(-50%);
+
+}
+
+/* PORTFOLIO */
+.menu4{
+
+bottom:90px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
+}
+
+/* WEBSITE */
+
+.menu5{
+
+right:120px;
+
+bottom:120px;
+
+}
+/* GERAK NAIK TURUN */
+
+@keyframes navFloat{
+
+0%,100%{
+transform:
+translateY(0);
+}
+
+50%{
+transform:
+translateY(-10px);
+}
+
+}
+
+@keyframes heroFloat{
+
+0%,100%{
+transform:
+translateY(0);
+}
+
+50%{
+transform:
+translateY(-12px);
+}
+
+}
+
 </style>
 </head>
 
@@ -1415,38 +1601,44 @@ translateY(-300px);
 <span style="left:60%;top:75%"></span>
 <span style="left:80%;top:85%"></span>
 
-<header>
-
-<nav>
-
-<div class="brand-wrapper">
+<div class="hero-profile">
 
 <img
 src="https://i.ibb.co.com/gbFTSvLD/Whats-App-Image-2026-04-23-at-22-10-56.jpg"
-class="profile-img"
-/>
+class="center-photo"
+>
 
-<div class="logo">
-MUHAMMAD HILAL MUBAROK
+<a href="#home" class="orbit menu1">
+<i class="fa-solid fa-house"></i>
+Beranda
+</a>
+
+<a href="#about" class="orbit menu2">
+<i class="fa-solid fa-user"></i>
+Tentang
+</a>
+
+<a href="#skills" class="orbit menu3">
+<i class="fa-solid fa-code"></i>
+Keahlian
+</a>
+
+<a href="#portfolio" class="orbit menu4">
+<i class="fa-solid fa-briefcase"></i>
+Portfolio
+</a>
+
+<a href="https://thubayumna-wq.github.io/sistem-kasir/"
+target="_blank"
+class="orbit menu5">
+
+<i class="fa-solid fa-globe"></i>
+
+Website
+
+</a>
+
 </div>
-
-</div>
-<button class="nav-toggle">
-☰
-</button>
-<ul class="nav-links">
-
-<li><a href="#home"><i class="fa-solid fa-house"></i> Beranda</a></li>
-<li><a href="#about"><i class="fa-solid fa-user"></i> Tentang</a></li>
-<li><a href="#skills"><i class="fa-solid fa-code"></i> Keahlian</a></li>
-<li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i> Portofolio</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
 <div class="hero-content">
 
 <h1>Muhamad Hilal Mubarok</h1>
