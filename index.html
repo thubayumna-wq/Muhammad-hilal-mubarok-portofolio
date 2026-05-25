@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+coding profil pribadi<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8" />
@@ -1402,8 +1402,10 @@ translateY(-300px);
 
 .hero-profile{
 
-width:720px;
-height:720px;
+position:relative;
+
+width:650px;
+height:650px;
 
 margin:auto;
 
@@ -1412,6 +1414,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 
+animation:heroFloat 6s ease-in-out infinite;
 
 }
 
@@ -1580,104 +1583,47 @@ rgba(245,158,11,.7);
 
 position:absolute;
 
-width:520px;
-height:520px;
+width:500px;
+height:500px;
 
 border-radius:50%;
 
 border:
-2px dashed rgba(255,255,255,.12);
+2px dashed rgba(255,255,255,.15);
 
 animation:
-spin 25s linear infinite;
+spin 30s linear infinite;
 
 }
 
-@keyframes spin{
-
-from{
-transform:rotate(0deg);
+.menu1{
+top:0;
+left:50%;
+transform:translateX(-50%);
 }
 
-to{
-transform:rotate(360deg);
+.menu2{
+left:0;
+top:50%;
+transform:translateY(-50%);
 }
 
+.menu3{
+right:0;
+top:50%;
+transform:translateY(-50%);
 }
 
-/* ===== MODEL JAM ===== */
-
-.hero-profile{
-
-width:850px;
-height:850px;
-
-position:relative;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-margin:auto;
-
+.menu4{
+bottom:0;
+left:50%;
+transform:translateX(-50%);
 }
 
-/* lingkar utama */
-
-.orbit-ring{
-
-position:absolute;
-
-width:520px;
-height:520px;
-
-border-radius:50%;
-
-border:2px dashed rgba(255,255,255,.12);
-
-animation:spin 30s linear infinite;
+.menu5{
+bottom:90px;
+right:40px;
 }
-
-/* menu mengikuti lingkaran */
-
-.orbit{
-
-position:absolute;
-
-width:170px;
-height:70px;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-gap:10px;
-
-padding:14px 20px;
-
-border-radius:50px;
-
-background:
-linear-gradient(
-135deg,
-rgba(139,92,246,.25),
-rgba(99,102,241,.18)
-);
-
-backdrop-filter:blur(15px);
-
-border:
-1px solid rgba(255,255,255,.1);
-
-color:white;
-
-text-decoration:none;
-
-box-shadow:
-0 10px 30px rgba(99,102,241,.2);
-
-}
-
 @keyframes navFloat{
 
 0%,100%{
@@ -1706,392 +1652,15 @@ translateY(-12px);
 
 }
 
-@keyframes menuFloat{
-
-0%,100%{
-transform:
-translateY(0);
-}
-
-50%{
-transform:
-translateY(-10px);
-}
-
-}
-
-/* ========= METEOR BARU ========= */
-
-.meteor-container{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-pointer-events:none;
-
-overflow:hidden;
-
-z-index:-2;
-
-}
-
-/* meteor */
-
-.meteor{
-
-position:absolute;
-
-top:-100px;
-
-right:-120px;
-
-width:4px;
-height:180px;
-
-border-radius:50px;
-
-transform:rotate(45deg);
-
-background:
-linear-gradient(
-to bottom,
-#fff,
-#ffb347,
-#ff6b35,
-transparent
-);
-
-box-shadow:
-0 0 15px #ff8c42,
-0 0 30px #ff5722;
-
-animation:
-meteorMove linear infinite;
-
-}
-
-/* ekor terang */
-
-.meteor::after{
-
-content:"";
-
-position:absolute;
-
-top:-8px;
-left:-4px;
-
-width:12px;
-height:12px;
-
-border-radius:50%;
-
-background:#ffd6a5;
-
-box-shadow:
-0 0 20px #ffb347,
-0 0 40px #ff5722;
-
-}
-
-/* posisi meteor */
-
-.m1{
-right:5%;
-animation-duration:7s;
-}
-
-.m2{
-right:20%;
-animation-duration:9s;
-animation-delay:2s;
-}
-
-.m3{
-right:40%;
-animation-duration:8s;
-animation-delay:4s;
-}
-
-.m4{
-right:60%;
-animation-duration:10s;
-animation-delay:1s;
-}
-
-/* animasi jatuh */
-
-@keyframes meteorMove{
-
-0%{
-
-transform:
-translate(0,0)
-rotate(45deg);
-
-opacity:0;
-
-}
-
-10%{
-opacity:1;
-}
-
-100%{
-
-transform:
-translate(-1200px,900px)
-rotate(45deg);
-
-opacity:0;
-
-}
-
-}
-
-/* ===== BINTANG BERKELIP ===== */
-
-.star{
-
-position:absolute;
-
-background:white;
-
-border-radius:50%;
-
-animation:
-twinkle 2s infinite alternate;
-
-}
-
-.s1{
-top:15%;
-left:15%;
-
-width:3px;
-height:3px;
-}
-
-.s2{
-top:30%;
-left:75%;
-
-width:4px;
-height:4px;
-
-animation-delay:1s;
-}
-
-.s3{
-top:70%;
-left:20%;
-
-width:2px;
-height:2px;
-
-animation-delay:.5s;
-}
-
-.s4{
-top:55%;
-left:85%;
-
-width:5px;
-height:5px;
-
-animation-delay:1.5s;
-}
-
-@keyframes twinkle{
-
-0%{
-
-opacity:.3;
-
-transform:
-scale(.8);
-
-}
-
-100%{
-
-opacity:1;
-
-transform:
-scale(1.5);
-
-}
-
-}
-
-/* animasi jatuh */
-
-@keyframes meteorFall{
-
-0%{
-
-transform:
-translate(0,0)
-rotate(45deg);
-
-opacity:0;
-
-}
-
-10%{
-opacity:1;
-}
-
-100%{
-
-transform:
-translate(-800px,800px)
-rotate(45deg);
-
-opacity:0;
-
-}
-
-}
-
-/* ===== ORBIT MENU BULAT ===== */
-
-.hero-profile{
-
-width:850px;
-height:850px;
-
-position:relative;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-margin:auto;
-
-}
-
-.orbit{
-
-position:absolute;
-
-width:170px;
-height:70px;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-gap:10px;
-
-padding:14px 20px;
-
-border-radius:50px;
-
-background:
-linear-gradient(
-135deg,
-rgba(139,92,246,.25),
-rgba(99,102,241,.18)
-);
-
-backdrop-filter:blur(15px);
-
-border:
-1px solid rgba(255,255,255,.1);
-
-color:white;
-
-text-decoration:none;
-
-box-shadow:
-0 10px 30px rgba(99,102,241,.2);
-
-top:50%;
-left:50%;
-
-}
-
-/* posisi melingkar */
-
-.menu1{
-transform:
-translate(-50%,-50%)
-rotate(0deg)
-translateY(-330px);
-}
-
-.menu2{
-transform:
-translate(-50%,-50%)
-rotate(51deg)
-translateY(-330px);
-}
-
-.menu3{
-transform:
-translate(-50%,-50%)
-rotate(102deg)
-translateY(-330px);
-}
-
-.menu4{
-transform:
-translate(-50%,-50%)
-rotate(153deg)
-translateY(-330px);
-}
-
-.menu5{
-transform:
-translate(-50%,-50%)
-rotate(204deg)
-translateY(-330px);
-}
-
-.menu6{
-transform:
-translate(-50%,-50%)
-rotate(255deg)
-translateY(-330px);
-}
-
-.menu7{
-transform:
-translate(-50%,-50%)
-rotate(306deg)
-translateY(-330px);
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="stars"></div>
-
-<!-- METEOR + STAR -->
-
-<div class="meteor-container">
-
-<div class="meteor m1"></div>
-<div class="meteor m2"></div>
-<div class="meteor m3"></div>
-<div class="meteor m4"></div>
-
-<div class="star s1"></div>
-<div class="star s2"></div>
-<div class="star s3"></div>
-<div class="star s4"></div>
-
-</div>
-
+    
 <div class="scroll-progress"></div>
+
 
 <!-- HERO -->
 
@@ -2403,7 +1972,7 @@ alt="Sketsa Wajah">
 <h3>Sketsa</h3>
 
 <p>
-Karya sketsa realistis 
+Karya sketsa realistis dengan detail tinggi
 </p>
 
 <span class="portfolio-tag">Sketsa</span>
