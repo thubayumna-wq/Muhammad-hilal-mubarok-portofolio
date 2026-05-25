@@ -1684,7 +1684,7 @@ translateY(-10px);
 
 }
 
-/* ================= METEOR ================= */
+/* ========= METEOR BARU ========= */
 
 .meteor-container{
 
@@ -1696,93 +1696,201 @@ left:0;
 width:100%;
 height:100%;
 
-overflow:hidden;
-
 pointer-events:none;
+
+overflow:hidden;
 
 z-index:-2;
 
 }
 
-/* badan meteor */
+/* meteor */
 
 .meteor{
 
 position:absolute;
 
-opacity:.8;
+top:-100px;
 
-mix-blend-mode:screen;
+right:-120px;
 
 width:4px;
+height:180px;
 
-height:140px;
+border-radius:50px;
+
+transform:rotate(45deg);
 
 background:
 linear-gradient(
 to bottom,
-white,
-rgba(139,92,246,.8),
+#fff,
+#ffb347,
+#ff6b35,
 transparent
 );
 
-border-radius:50px;
-
-transform:
-rotate(45deg);
-
-filter:
-drop-shadow(0 0 15px #8b5cf6)
-drop-shadow(0 0 30px #6366f1);
+box-shadow:
+0 0 15px #ff8c42,
+0 0 30px #ff5722;
 
 animation:
-meteorFall linear infinite;
+meteorMove linear infinite;
+
+}
+
+/* ekor terang */
+
+.meteor::after{
+
+content:"";
+
+position:absolute;
+
+top:-8px;
+left:-4px;
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:#ffd6a5;
+
+box-shadow:
+0 0 20px #ffb347,
+0 0 40px #ff5722;
 
 }
 
 /* posisi meteor */
 
 .m1{
-top:-100px;
 right:5%;
-
-animation-duration:6s;
+animation-duration:7s;
 }
 
 .m2{
-top:-150px;
-right:25%;
-
-animation-duration:8s;
-
+right:20%;
+animation-duration:9s;
 animation-delay:2s;
 }
 
 .m3{
-top:-80px;
-right:45%;
-
-animation-duration:7s;
-
+right:40%;
+animation-duration:8s;
 animation-delay:4s;
 }
 
 .m4{
-top:-120px;
-right:65%;
+right:60%;
+animation-duration:10s;
+animation-delay:1s;
+}
 
-animation-duration:9s;
+/* animasi jatuh */
+
+@keyframes meteorMove{
+
+0%{
+
+transform:
+translate(0,0)
+rotate(45deg);
+
+opacity:0;
+
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+
+transform:
+translate(-1200px,900px)
+rotate(45deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ===== BINTANG BERKELIP ===== */
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:
+twinkle 2s infinite alternate;
+
+}
+
+.s1{
+top:15%;
+left:15%;
+
+width:3px;
+height:3px;
+}
+
+.s2{
+top:30%;
+left:75%;
+
+width:4px;
+height:4px;
 
 animation-delay:1s;
 }
 
-.m5{
-top:-100px;
-right:85%;
+.s3{
+top:70%;
+left:20%;
 
-animation-duration:10s;
+width:2px;
+height:2px;
 
-animation-delay:3s;
+animation-delay:.5s;
+}
+
+.s4{
+top:55%;
+left:85%;
+
+width:5px;
+height:5px;
+
+animation-delay:1.5s;
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.3;
+
+transform:
+scale(.8);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+scale(1.5);
+
+}
+
 }
 
 /* animasi jatuh */
@@ -1822,14 +1930,19 @@ opacity:0;
 
 <div class="stars"></div>
 
-<!-- METEOR -->
+<!-- METEOR + STAR -->
+
 <div class="meteor-container">
 
 <div class="meteor m1"></div>
 <div class="meteor m2"></div>
 <div class="meteor m3"></div>
 <div class="meteor m4"></div>
-<div class="meteor m5"></div>
+
+<div class="star s1"></div>
+<div class="star s2"></div>
+<div class="star s3"></div>
+<div class="star s4"></div>
 
 </div>
 
