@@ -1578,70 +1578,106 @@ rgba(245,158,11,.7);
 
 .orbit-ring{
 
-width:560px;
-height:560px;
+position:absolute;
+
+width:520px;
+height:520px;
 
 border-radius:50%;
 
 border:
-2px dashed rgba(255,255,255,.15);
+2px dashed rgba(255,255,255,.12);
 
 animation:
-spin 30s linear infinite;
+spin 25s linear infinite;
 
 }
 
-.menu1{
-top:0;
-left:50%;
-transform:translateX(-50%);
+@keyframes spin{
 
-animation:
-menuFloat 4s ease-in-out infinite;
+from{
+transform:rotate(0deg);
 }
 
-.menu2{
-left:0;
-top:50%;
-transform:translateY(-50%);
-
-animation:
-menuFloat 4s ease-in-out infinite;
-
-animation-delay:.5s;
+to{
+transform:rotate(360deg);
 }
 
-.menu3{
-right:0;
-top:50%;
-transform:translateY(-50%);
-
-animation:
-menuFloat 4s ease-in-out infinite;
-
-animation-delay:1s;
 }
 
-.menu4{
-bottom:0;
-left:50%;
-transform:translateX(-50%);
+/* ===== MODEL JAM ===== */
 
-animation:
-menuFloat 4s ease-in-out infinite;
+.hero-profile{
 
-animation-delay:1.5s;
+width:850px;
+height:850px;
+
+position:relative;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+margin:auto;
+
 }
 
-.menu5{
-bottom:90px;
-right:40px;
+/* lingkar utama */
 
-animation:
-menuFloat 4s ease-in-out infinite;
+.orbit-ring{
 
-animation-delay:2s;
+position:absolute;
+
+width:520px;
+height:520px;
+
+border-radius:50%;
+
+border:2px dashed rgba(255,255,255,.12);
+
+animation:spin 30s linear infinite;
 }
+
+/* menu mengikuti lingkaran */
+
+.orbit{
+
+position:absolute;
+
+width:170px;
+height:70px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+gap:10px;
+
+padding:14px 20px;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+135deg,
+rgba(139,92,246,.25),
+rgba(99,102,241,.18)
+);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.1);
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:
+0 10px 30px rgba(99,102,241,.2);
+
+}
+
 @keyframes navFloat{
 
 0%,100%{
@@ -1921,6 +1957,115 @@ opacity:0;
 
 }
 
+}
+
+/* ===== ORBIT MENU BULAT ===== */
+
+.hero-profile{
+
+width:850px;
+height:850px;
+
+position:relative;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+margin:auto;
+
+}
+
+.orbit{
+
+position:absolute;
+
+width:170px;
+height:70px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+gap:10px;
+
+padding:14px 20px;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+135deg,
+rgba(139,92,246,.25),
+rgba(99,102,241,.18)
+);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.1);
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:
+0 10px 30px rgba(99,102,241,.2);
+
+top:50%;
+left:50%;
+
+}
+
+/* posisi melingkar */
+
+.menu1{
+transform:
+translate(-50%,-50%)
+rotate(0deg)
+translateY(-330px);
+}
+
+.menu2{
+transform:
+translate(-50%,-50%)
+rotate(51deg)
+translateY(-330px);
+}
+
+.menu3{
+transform:
+translate(-50%,-50%)
+rotate(102deg)
+translateY(-330px);
+}
+
+.menu4{
+transform:
+translate(-50%,-50%)
+rotate(153deg)
+translateY(-330px);
+}
+
+.menu5{
+transform:
+translate(-50%,-50%)
+rotate(204deg)
+translateY(-330px);
+}
+
+.menu6{
+transform:
+translate(-50%,-50%)
+rotate(255deg)
+translateY(-330px);
+}
+
+.menu7{
+transform:
+translate(-50%,-50%)
+rotate(306deg)
+translateY(-330px);
 }
 
 </style>
