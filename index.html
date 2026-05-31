@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+coding profil pribadi<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8" />
@@ -42,23 +42,16 @@ html{
 }
 
 body{
+    font-family:'Plus Jakarta Sans',sans-serif;
 
-font-family:'Plus Jakarta Sans',sans-serif;
+    background:
+        radial-gradient(circle at top left,#1e1b4b 0%,transparent 30%),
+        radial-gradient(circle at bottom right,#312e81 0%,transparent 30%),
+        var(--bg);
 
-background:
-linear-gradient(
-to bottom,
-#020617 0%,
-#0f172a 40%,
-#111827 100%
-);
+    color:var(--text);
 
-color:var(--text);
-
-overflow-x:hidden;
-
-position:relative;
-
+    overflow-x:hidden;
 }
     /* ===== BACKGROUND ANIMATION ===== */
 
@@ -1409,8 +1402,10 @@ translateY(-300px);
 
 .hero-profile{
 
-width:560px;
-height:560px;
+position:relative;
+
+width:650px;
+height:650px;
 
 margin:auto;
 
@@ -1419,8 +1414,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-/* HAPUS ANIMASI */
-animation:none;
+animation:heroFloat 6s ease-in-out infinite;
 
 }
 
@@ -1587,8 +1581,10 @@ rgba(245,158,11,.7);
 
 .orbit-ring{
 
-width:430px;
-height:430px;
+position:absolute;
+
+width:500px;
+height:500px;
 
 border-radius:50%;
 
@@ -1656,287 +1652,10 @@ translateY(-12px);
 
 }
 
-/* ===== PEMANDANGAN MALAM ===== */
-
-.landscape{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-z-index:-20;
-
-overflow:hidden;
-
-background:
-linear-gradient(
-to bottom,
-#020617 0%,
-#081020 30%,
-#13213d 70%,
-#1e293b 100%
-);
-
-}
-
-/* BULAN */
-
-.moon{
-
-position:absolute;
-
-top:80px;
-right:140px;
-
-width:150px;
-height:150px;
-
-border-radius:50%;
-
-background:
-radial-gradient(
-circle,
-#fff,
-#e2e8f0
-);
-
-box-shadow:
-0 0 80px white,
-0 0 150px rgba(255,255,255,.5);
-
-}
-
-/* BINTANG */
-
-.star{
-
-position:absolute;
-
-width:3px;
-height:3px;
-
-background:white;
-
-border-radius:50%;
-
-box-shadow:
-0 0 8px white;
-
-animation:
-twinkle 2s infinite alternate;
-
-}
-
-@keyframes twinkle{
-
-from{
-opacity:.2;
-transform:scale(.8);
-}
-
-to{
-opacity:1;
-transform:scale(1.5);
-}
-
-}
-
-/* METEOR */
-
-.meteor{
-
-position:absolute;
-
-top:-100px;
-
-width:180px;
-height:2px;
-
-background:
-linear-gradient(
-90deg,
-white,
-transparent
-);
-
-transform:
-rotate(-35deg);
-
-animation:
-meteorMove linear infinite;
-
-}
-
-@keyframes meteorMove{
-
-0%{
-
-transform:
-translate(0,0)
-rotate(-35deg);
-
-opacity:1;
-
-}
-
-100%{
-
-transform:
-translate(-900px,900px)
-rotate(-35deg);
-
-opacity:0;
-
-}
-
-}
-
-/* GUNUNG BELAKANG */
-
-.mountain1{
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-height:420px;
-
-background:
-linear-gradient(
-to top,
-#09111f,
-#1e293b
-);
-
-clip-path:
-polygon(
-0 100%,
-8% 65%,
-20% 80%,
-35% 40%,
-50% 75%,
-65% 30%,
-82% 72%,
-100% 45%,
-100% 100%
-);
-
-}
-
-/* GUNUNG DEPAN */
-
-.mountain2{
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-height:300px;
-
-background:
-linear-gradient(
-to top,
-#111827,
-#334155
-);
-
-clip-path:
-polygon(
-0 100%,
-15% 60%,
-30% 85%,
-45% 40%,
-65% 75%,
-80% 50%,
-100% 70%,
-100% 100%
-);
-
-}
-
-/* KABUT */
-
-.fog{
-
-position:absolute;
-
-bottom:120px;
-
-width:200%;
-
-height:120px;
-
-background:
-rgba(255,255,255,.05);
-
-filter:blur(45px);
-
-animation:
-fogMove 18s linear infinite;
-
-}
-
-@keyframes fogMove{
-
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(-300px);
-}
-
-}
-
 </style>
 </head>
 
 <body>
-
-   <div class="landscape">
-
-<div class="moon"></div>
-
-<!-- BINTANG -->
-
-<div class="star" style="top:10%;left:10%"></div>
-<div class="star" style="top:15%;left:30%"></div>
-<div class="star" style="top:8%;left:55%"></div>
-<div class="star" style="top:20%;left:75%"></div>
-<div class="star" style="top:12%;left:85%"></div>
-
-<div class="star" style="top:28%;left:20%"></div>
-<div class="star" style="top:25%;left:40%"></div>
-<div class="star" style="top:18%;left:65%"></div>
-
-<!-- METEOR -->
-
-<div class="meteor"
-style="
-left:85%;
-animation-duration:5s;
-"></div>
-
-<div class="meteor"
-style="
-left:60%;
-animation-duration:8s;
-animation-delay:2s;
-"></div>
-
-<div class="fog"></div>
-
-<div class="mountain1"></div>
-
-<div class="mountain2"></div>
-
-</div>
 
 <div class="stars"></div>
     
@@ -1954,10 +1673,6 @@ animation-delay:2s;
 <div class="hero-profile">
 
 <div class="orbit-ring"></div>
-
-</div>
-
-</div>
 
 <img
 src="https://i.ibb.co.com/gbFTSvLD/Whats-App-Image-2026-04-23-at-22-10-56.jpg"
